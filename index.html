@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA na Preservação Ambiental - Fluxograma Interativo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .main-box {
+            background: linear-gradient(135deg, #00c853 0%, #00b74d 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: scaleIn 0.8s ease-out;
+        }
+
+        .main-box h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .arrow {
+            font-size: 2em;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+
+        .three-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        .column-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-left: 5px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .column-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .column-box.monitor {
+            border-left-color: #FF6B6B;
+        }
+
+        .column-box.otimizar {
+            border-left-color: #FFA500;
+        }
+
+        .column-box.previsao {
+            border-left-color: #4ECDC4;
+        }
+
+        .column-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .column-box ul {
+            list-style: none;
+        }
+
+        .column-box li {
+            padding: 8px 0;
+            color: #555;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95em;
+        }
+
+        .column-box li:last-child {
+            border-bottom: none;
+        }
+
+        .column-box li:before {
+            content: "▪ ";
+            color: #00c853;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .decision-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: slideUp 0.8s ease-out 0.6s both;
+        }
+
+        .decision-box h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-out 0.9s both;
+        }
+
+        .result-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-top: 4px solid #00c853;
+            transition: transform 0.3s ease;
+        }
+
+        .result-card:hover {
+            transform: scale(1.05);
+        }
+
+        .result-card .icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .result-card h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .result-card p {
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        .actions-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-out 1.2s both;
+        }
+
+        .action-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-top: 4px solid #667eea;
+        }
+
+        .action-box h4 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+
+        .action-box p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        .conclusion {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.8s ease-out 1.5s both;
+        }
+
+        .conclusion h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .conclusion p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9em;
+        }
+
+        .divider-arrow {
+            text-align: center;
+            font-size: 2em;
+            color: white;
+            margin: 30px 0;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .main-box h2 {
+                font-size: 1.5em;
+            }
+
+            .three-columns {
+                grid-template-columns: 1fr;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Inteligência Artificial na Preservação Ambiental</h1>
+            <p>Um fluxograma interativo mostrando como a IA pode ajudar a proteger nosso planeta</p>
+        </header>
+
+        <!-- Main Concept -->
+        <div class="main-box">
+            <h2>🤖 INTELIGÊNCIA ARTIFICIAL</h2>
+            <p>Ferramenta poderosa para preservação ambiental</p>
+        </div>
+
+        <div class="divider-arrow">⬇️</div>
+
+        <!-- Three Main Pillars -->
+        <div class="three-columns">
+            <div class="column-box monitor">
+                <h3>📡 MONITORAMENTO AMBIENTAL</h3>
+                <ul>
+                    <li>Satélites com IA para análise florestal</li>
+                    <li>Sensores IoT em tempo real</li>
+                    <li>Câmeras com visão computacional</li>
+                    <li>Detecção de desmatamento ilegal</li>
+                    <li>Identificação de queimadas</li>
+                    <li>Bioacústica para espécies animais</li>
+                </ul>
+            </div>
+
+            <div class="column-box otimizar">
+                <h3>⚡ OTIMIZAÇÃO DE RECURSOS</h3>
+                <ul>
+                    <li>Energia renovável (solar/eólica)</li>
+                    <li>Agricultura de precisão</li>
+                    <li>Redução de emissões de carbono</li>
+                    <li>Eficiência energética urbana</li>
+                    <li>Gestão inteligente de água</li>
+                    <li>Otimização industrial</li>
+                </ul>
+            </div>
+
+            <div class="column-box previsao">
+                <h3>📊 PREVISÃO E ANÁLISE</h3>
+                <ul>
+                    <li>Modelagem de mudanças climáticas</li>
+                    <li>Alertas de desastres naturais</li>
+                    <li>Proteção de espécies em risco</li>
+                    <li>Análise de biodiversidade</li>
+                    <li>Relatórios de sustentabilidade</li>
+                    <li>Previsões de cenários futuros</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="divider-arrow">⬇️</div>
+
+        <!-- Decision Making -->
+        <div class="decision-box">
+            <h3>🎯 TOMADA DE DECISÃO INFORMADA</h3>
+            <p>Baseada em dados precisos e análises em tempo real</p>
+        </div>
+
+        <div class="divider-arrow">⬇️</div>
+
+        <!-- Three Action Paths -->
+        <div class="actions-section">
+            <div class="action-box">
+                <h4>📋 Políticas Públicas Melhoradas</h4>
+                <p>Governos utilizam dados de IA para criar políticas ambientais mais eficazes e baseadas em evidências científicas.</p>
+            </div>
+
+            <div class="action-box">
+                <h4>🏢 Estratégias Empresariais Sustentáveis</h4>
+                <p>Empresas implementam práticas sustentáveis com otimização de recursos e redução de impactos ambientais.</p>
+            </div>
+
+            <div class="action-box">
+                <h4>👥 Ações Locais Comunitárias</h4>
+                <p>Comunidades adotam iniciativas de preservação com suporte tecnológico e monitoramento local.</p>
+            </div>
+        </div>
+
+        <div class="divider-arrow">⬇️</div>
+
+        <!-- Results -->
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="icon">♻️</div>
+                <h4>Preservação Ambiental</h4>
+                <p>Proteção ativa de ecossistemas e recursos naturais</p>
+            </div>
+
+            <div class="result-card">
+                <div class="icon">🌱</div>
+                <h4>Desenvolvimento Sustentável</h4>
+                <p>Crescimento econômico respeitando o meio ambiente</p>
+            </div>
+
+            <div class="result-card">
+                <div class="icon">🦋</div>
+                <h4>Biodiversidade Protegida</h4>
+                <p>Conservação de espécies e habitats naturais</p>
+            </div>
+
+            <div class="result-card">
+                <div class="icon">💧</div>
+                <h4>Recursos Naturais Conservados</h4>
+                <p>Uso eficiente de água, energia e outros recursos</p>
+            </div>
+
+            <div class="result-card">
+                <div class="icon">🌍</div>
+                <h4>Planeta Mais Saudável</h4>
+                <p>Redução de poluição e emissões de carbono</p>
+            </div>
+
+            <div class="result-card">
+                <div class="icon">🔮</div>
+                <h4>Futuro Sustentável</h4>
+                <p>Legado ambiental para futuras gerações</p>
+            </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="conclusion">
+            <h2>✨ Conclusão</h2>
+            <p>
+                A inteligência artificial representa uma ferramenta revolucionária e indispensável para enfrentar os desafios ambientais do século XXI. 
+                Através do monitoramento em tempo real, otimização de recursos e previsões precisas, a IA capacita sociedade a tomar decisões informadas 
+                que promovem a preservação ambiental, o desenvolvimento sustentável e a proteção da biodiversidade. 
+                Juntos, tecnologia e compromisso ambiental podem criar um futuro mais verde e equilibrado para todos.
+            </p>
+        </div>
+
+        <footer>
+            <p>🌿 Fluxograma Interativo - IA na Preservação Ambiental | Criado com ❤️ para um planeta melhor</p>
+            <p>Fonte: Repositório <a href="https://github.com/outplatinum/fluxograma" style="color: #00c853;">outplatinum/fluxograma</a></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 50%, #1a5f7a 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -27,121 +27,168 @@
             text-align: center;
             color: white;
             margin-bottom: 30px;
+            padding: 30px 20px;
+            background: rgba(0, 200, 83, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 200, 83, 0.3);
         }
 
         header h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+            letter-spacing: 1px;
         }
 
         header p {
-            font-size: 1.1em;
-            opacity: 0.9;
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 300;
         }
 
         .content-wrapper {
             display: grid;
             grid-template-columns: 3fr 1fr;
-            gap: 20px;
+            gap: 25px;
             margin-bottom: 20px;
         }
 
         .flowchart-container {
             background: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             overflow: auto;
             grid-column: 1;
-            max-height: 1000px;
-            min-height: 1000px;
+            max-height: 1100px;
+            min-height: 1100px;
+            border: 3px solid rgba(0, 200, 83, 0.2);
         }
 
         .description-container {
             background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             grid-column: 2;
-            max-height: 1000px;
+            max-height: 1100px;
             overflow-y: auto;
+            border: 3px solid rgba(100, 126, 234, 0.2);
+            backdrop-filter: blur(10px);
         }
 
         .description-title {
-            font-size: 1.8em;
-            color: #1e3c72;
-            margin-bottom: 15px;
-            border-bottom: 3px solid #00c853;
-            padding-bottom: 10px;
+            font-size: 2em;
+            color: #00c853;
+            margin-bottom: 20px;
+            border-bottom: 4px solid #00c853;
+            padding-bottom: 15px;
+            font-weight: 700;
         }
 
         .description-content {
-            color: #555;
-            line-height: 1.8;
-            font-size: 0.95em;
+            color: #333;
+            line-height: 1.9;
+            font-size: 1em;
         }
 
         .description-content p {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .description-content p strong {
+            color: #00c853;
+            font-weight: 600;
         }
 
         .description-content ul {
             list-style: none;
             padding-left: 0;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .description-content li {
-            padding: 8px 0;
-            padding-left: 25px;
+            padding: 10px 0;
+            padding-left: 30px;
             position: relative;
+            color: #555;
         }
 
         .description-content li:before {
-            content: "✓";
+            content: "→";
             position: absolute;
             left: 0;
             color: #00c853;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
 
         .flowchart-svg {
             width: 100%;
             height: 100%;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
         }
 
         .info-badge {
             display: inline-block;
-            background: #e3f2fd;
-            color: #1976d2;
-            padding: 8px 12px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            color: #00c853;
+            padding: 10px 15px;
             border-radius: 20px;
-            font-size: 0.85em;
+            font-size: 0.9em;
             margin-top: 15px;
+            font-weight: 600;
+            border: 2px solid #00c853;
         }
 
         footer {
             text-align: center;
             color: white;
-            margin-top: 30px;
-            font-size: 0.9em;
+            margin-top: 40px;
+            font-size: 1em;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
         }
 
         .default-info {
-            color: #999;
+            color: #667eea;
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
             font-style: italic;
+            font-size: 1.1em;
+            font-weight: 500;
         }
 
         .topic-box {
-            background: #f0f7ff;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 15px;
-            border-left: 4px solid #00c853;
+            background: linear-gradient(135deg, #f0f7ff 0%, #f5f7fa 100%);
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 18px;
+            border-left: 5px solid #00c853;
+            box-shadow: 0 4px 12px rgba(0, 200, 83, 0.1);
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #00c853;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00a040;
         }
 
         @media (max-width: 1024px) {
@@ -169,245 +216,248 @@
 <body>
     <div class="container">
         <header>
-            <h1>🌍 Fluxograma Interativo: IA na Preservação Ambiental</h1>
-            <p>Clique nos tópicos do fluxograma para ver descrições detalhadas</p>
+            <h1>🌍 Fluxograma Interativo</h1>
+            <h1 style="font-size: 1.8em; margin-top: 0; color: #00c853;">IA na Preservação Ambiental</h1>
+            <p>Clique em qualquer tópico para explorar detalhes</p>
         </header>
 
         <div class="content-wrapper">
             <div class="flowchart-container">
                 <svg class="flowchart-svg" viewBox="0 0 1600 3200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Definição de estilos -->
                     <defs>
                         <style>
                             .node-box {
                                 cursor: pointer;
-                                transition: opacity 0.3s ease;
+                                transition: all 0.3s ease;
+                                filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
                             }
                             .node-box:hover {
-                                opacity: 0.8;
+                                filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25));
+                                transform: scale(1.02);
                             }
                             .node-text {
-                                font-family: Arial, sans-serif;
-                                font-size: 15px;
+                                font-family: 'Segoe UI', Arial, sans-serif;
+                                font-size: 16px;
                                 text-anchor: middle;
                                 pointer-events: none;
+                                font-weight: 600;
+                                fill: white;
                             }
-                            .node-title {
-                                font-weight: bold;
-                                font-size: 17px;
+                            .node-subtitle {
+                                font-size: 14px;
+                                font-weight: 500;
+                                fill: rgba(255, 255, 255, 0.95);
                             }
                             .arrow {
-                                stroke: #666;
-                                stroke-width: 2px;
+                                stroke: #667eea;
+                                stroke-width: 3px;
                                 fill: none;
                                 marker-end: url(#arrowhead);
+                                filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
                             }
                         </style>
                         <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                            <polygon points="0 0, 10 3, 0 6" fill="#666" />
+                            <polygon points="0 0, 10 3, 0 6" fill="#667eea" />
                         </marker>
                     </defs>
 
                     <!-- Nível 1: IA Principal -->
                     <path class="arrow" d="M 800 100 L 800 180"/>
-                    <rect class="node-box" id="node-ia" data-topic="ia" x="600" y="20" width="400" height="80" rx="12" fill="#00c853" stroke="#00b74d" stroke-width="4"/>
-                    <text class="node-text node-title" x="800" y="50">🤖 INTELIGÊNCIA ARTIFICIAL</text>
-                    <text class="node-text" x="800" y="75">Preservação Ambiental</text>
+                    <rect class="node-box" id="node-ia" data-topic="ia" x="550" y="20" width="500" height="80" rx="15" fill="#00c853" stroke="#00a040" stroke-width="3"/>
+                    <text class="node-text" x="800" y="55">🤖 INTELIGÊNCIA ARTIFICIAL</text>
+                    <text class="node-subtitle" x="800" y="80">Preservação Ambiental Global</text>
 
                     <!-- Nível 2: Aplicações Principais -->
-                    <path class="arrow" d="M 800 180 L 800 280"/>
-                    <rect class="node-box" id="node-aplicacoes" data-topic="aplicacoes" x="600" y="180" width="400" height="100" rx="12" fill="#667eea" stroke="#5568d3" stroke-width="3"/>
-                    <text class="node-text node-title" x="800" y="215">Aplicações Principais</text>
-                    <text class="node-text" x="800" y="240">(Monitoramento, Otimização, Previsão)</text>
-                    <text class="node-text" x="800" y="260">3 Pilares Estratégicos</text>
+                    <path class="arrow" d="M 800 180 L 800 300"/>
+                    <rect class="node-box" id="node-aplicacoes" data-topic="aplicacoes" x="550" y="180" width="500" height="120" rx="15" fill="#667eea" stroke="#5568d3" stroke-width="3"/>
+                    <text class="node-text" x="800" y="220">Aplicações Principais</text>
+                    <text class="node-subtitle" x="800" y="250">Monitoramento • Otimização • Previsão</text>
+                    <text class="node-subtitle" x="800" y="275">3 Pilares Estratégicos</text>
 
                     <!-- Nível 3: Três Pilares -->
-                    <!-- Monitoramento -->
-                    <path class="arrow" d="M 650 280 L 400 380"/>
-                    <rect class="node-box" id="node-monitor" data-topic="monitor" x="200" y="380" width="400" height="80" rx="12" fill="#FF6B6B" stroke="#ff5252" stroke-width="3"/>
-                    <text class="node-text node-title" x="400" y="410">📡 MONITORAMENTO</text>
-                    <text class="node-text" x="400" y="440">AMBIENTAL</text>
+                    <path class="arrow" d="M 650 300 L 350 420"/>
+                    <rect class="node-box" id="node-monitor" data-topic="monitor" x="150" y="420" width="400" height="100" rx="15" fill="#FF6B6B" stroke="#ff5252" stroke-width="3"/>
+                    <text class="node-text" x="350" y="460">📡 MONITORAMENTO</text>
+                    <text class="node-subtitle" x="350" y="490">Ambiental em Tempo Real</text>
 
-                    <!-- Otimização -->
-                    <path class="arrow" d="M 800 280 L 800 380"/>
-                    <rect class="node-box" id="node-otimiza" data-topic="otimiza" x="600" y="380" width="400" height="80" rx="12" fill="#FFA500" stroke="#ff9100" stroke-width="3"/>
-                    <text class="node-text node-title" x="800" y="410">⚡ OTIMIZAÇÃO</text>
-                    <text class="node-text" x="800" y="440">DE RECURSOS</text>
+                    <path class="arrow" d="M 800 300 L 800 420"/>
+                    <rect class="node-box" id="node-otimiza" data-topic="otimiza" x="600" y="420" width="400" height="100" rx="15" fill="#FFA500" stroke="#ff9100" stroke-width="3"/>
+                    <text class="node-text" x="800" y="460">⚡ OTIMIZAÇÃO</text>
+                    <text class="node-subtitle" x="800" y="490">Eficiente de Recursos</text>
 
-                    <!-- Previsão -->
-                    <path class="arrow" d="M 950 280 L 1200 380"/>
-                    <rect class="node-box" id="node-previsao" data-topic="previsao" x="1000" y="380" width="400" height="80" rx="12" fill="#4ECDC4" stroke="#45b8b8" stroke-width="3"/>
-                    <text class="node-text node-title" x="1200" y="410">📊 PREVISÃO</text>
-                    <text class="node-text" x="1200" y="440">E ANÁLISE</text>
+                    <path class="arrow" d="M 950 300 L 1250 420"/>
+                    <rect class="node-box" id="node-previsao" data-topic="previsao" x="1050" y="420" width="400" height="100" rx="15" fill="#4ECDC4" stroke="#45b8b8" stroke-width="3"/>
+                    <text class="node-text" x="1250" y="460">📊 PREVISÃO</text>
+                    <text class="node-subtitle" x="1250" y="490">Antecipada de Problemas</text>
 
                     <!-- Nível 4: Aplicações específicas de Monitoramento -->
-                    <path class="arrow" d="M 300 460 L 150 550"/>
-                    <path class="arrow" d="M 350 460 L 300 550"/>
-                    <path class="arrow" d="M 400 460 L 450 550"/>
-                    <path class="arrow" d="M 450 460 L 600 550"/>
+                    <path class="arrow" d="M 250 520 L 120 640"/>
+                    <path class="arrow" d="M 300 520 L 250 640"/>
+                    <path class="arrow" d="M 350 520 L 380 640"/>
+                    <path class="arrow" d="M 420 520 L 550 640"/>
 
-                    <rect class="node-box" id="node-satelite" data-topic="satelite" x="50" y="550" width="200" height="70" rx="10" fill="#FFE082" stroke="#FFA500" stroke-width="2"/>
-                    <text class="node-text node-title" x="150" y="580">🛰️ Satélites</text>
-                    <text class="node-text" x="150" y="605">e Imagens</text>
+                    <rect class="node-box" id="node-satelite" data-topic="satelite" x="20" y="640" width="200" height="80" rx="12" fill="#FFE082" stroke="#FFA500" stroke-width="2"/>
+                    <text class="node-text" x="120" y="670">🛰️ Satélites</text>
+                    <text class="node-subtitle" x="120" y="695">Imagens Orbitais</text>
 
-                    <rect class="node-box" id="node-iot" data-topic="iot" x="200" y="550" width="200" height="70" rx="10" fill="#FFE082" stroke="#FFA500" stroke-width="2"/>
-                    <text class="node-text node-title" x="300" y="580">📍 Sensores</text>
-                    <text class="node-text" x="300" y="605">IoT</text>
+                    <rect class="node-box" id="node-iot" data-topic="iot" x="170" y="640" width="200" height="80" rx="12" fill="#FFE082" stroke="#FFA500" stroke-width="2"/>
+                    <text class="node-text" x="270" y="670">📍 Sensores</text>
+                    <text class="node-subtitle" x="270" y="695">IoT Conectados</text>
 
-                    <rect class="node-box" id="node-cameras" data-topic="cameras" x="350" y="550" width="200" height="70" rx="10" fill="#FFE082" stroke="#FFA500" stroke-width="2"/>
-                    <text class="node-text node-title" x="450" y="580">🎥 Câmeras</text>
-                    <text class="node-text" x="450" y="605">Inteligentes</text>
+                    <rect class="node-box" id="node-cameras" data-topic="cameras" x="320" y="640" width="200" height="80" rx="12" fill="#FFE082" stroke="#FFA500" stroke-width="2"/>
+                    <text class="node-text" x="420" y="670">🎥 Câmeras</text>
+                    <text class="node-subtitle" x="420" y="695">Visão Computacional</text>
 
-                    <rect class="node-box" id="node-bioacustica" data-topic="bioacustica" x="500" y="550" width="200" height="70" rx="10" fill="#FFE082" stroke="#FFA500" stroke-width="2"/>
-                    <text class="node-text node-title" x="600" y="580">🔊 Bioacústica</text>
-                    <text class="node-text" x="600" y="605">Análise Acústica</text>
+                    <rect class="node-box" id="node-bioacustica" data-topic="bioacustica" x="470" y="640" width="200" height="80" rx="12" fill="#FFE082" stroke="#FFA500" stroke-width="2"/>
+                    <text class="node-text" x="570" y="670">🔊 Bioacústica</text>
+                    <text class="node-subtitle" x="570" y="695">Sons Naturais</text>
 
                     <!-- Nível 4: Aplicações específicas de Otimização -->
-                    <path class="arrow" d="M 700 460 L 600 550"/>
-                    <path class="arrow" d="M 800 460 L 750 550"/>
-                    <path class="arrow" d="M 900 460 L 900 550"/>
-                    <path class="arrow" d="M 1000 460 L 1050 550"/>
+                    <path class="arrow" d="M 700 520 L 620 640"/>
+                    <path class="arrow" d="M 800 520 L 750 640"/>
+                    <path class="arrow" d="M 900 520 L 900 640"/>
+                    <path class="arrow" d="M 1000 520 L 1050 640"/>
 
-                    <rect class="node-box" id="node-energia" data-topic="energia" x="550" y="550" width="200" height="70" rx="10" fill="#C8E6C9" stroke="#81C784" stroke-width="2"/>
-                    <text class="node-text node-title" x="650" y="580">☀️ Energia</text>
-                    <text class="node-text" x="650" y="605">Renovável</text>
+                    <rect class="node-box" id="node-energia" data-topic="energia" x="530" y="640" width="200" height="80" rx="12" fill="#C8E6C9" stroke="#81C784" stroke-width="2"/>
+                    <text class="node-text" x="630" y="670">☀️ Energia</text>
+                    <text class="node-subtitle" x="630" y="695">Renovável</text>
 
-                    <rect class="node-box" id="node-agricultura" data-topic="agricultura" x="700" y="550" width="200" height="70" rx="10" fill="#C8E6C9" stroke="#81C784" stroke-width="2"/>
-                    <text class="node-text node-title" x="800" y="580">🌾 Agricultura</text>
-                    <text class="node-text" x="800" y="605">Precisão</text>
+                    <rect class="node-box" id="node-agricultura" data-topic="agricultura" x="680" y="640" width="200" height="80" rx="12" fill="#C8E6C9" stroke="#81C784" stroke-width="2"/>
+                    <text class="node-text" x="780" y="670">🌾 Agricultura</text>
+                    <text class="node-subtitle" x="780" y="695">Precisa</text>
 
-                    <rect class="node-box" id="node-emissoes" data-topic="emissoes" x="850" y="550" width="200" height="70" rx="10" fill="#C8E6C9" stroke="#81C784" stroke-width="2"/>
-                    <text class="node-text node-title" x="950" y="580">💨 Redução</text>
-                    <text class="node-text" x="950" y="605">Emissões</text>
+                    <rect class="node-box" id="node-emissoes" data-topic="emissoes" x="830" y="640" width="200" height="80" rx="12" fill="#C8E6C9" stroke="#81C784" stroke-width="2"/>
+                    <text class="node-text" x="930" y="670">💨 Redução</text>
+                    <text class="node-subtitle" x="930" y="695">Carbono</text>
 
-                    <rect class="node-box" id="node-urbana" data-topic="urbana" x="1000" y="550" width="200" height="70" rx="10" fill="#C8E6C9" stroke="#81C784" stroke-width="2"/>
-                    <text class="node-text node-title" x="1100" y="580">💡 Eficiência</text>
-                    <text class="node-text" x="1100" y="605">Urbana</text>
+                    <rect class="node-box" id="node-urbana" data-topic="urbana" x="980" y="640" width="200" height="80" rx="12" fill="#C8E6C9" stroke="#81C784" stroke-width="2"/>
+                    <text class="node-text" x="1080" y="670">💡 Cidades</text>
+                    <text class="node-subtitle" x="1080" y="695">Inteligentes</text>
 
                     <!-- Nível 4: Aplicações específicas de Previsão -->
-                    <path class="arrow" d="M 1100 460 L 1150 550"/>
-                    <path class="arrow" d="M 1200 460 L 1250 550"/>
-                    <path class="arrow" d="M 1300 460 L 1350 550"/>
+                    <path class="arrow" d="M 1150 520 L 1180 640"/>
+                    <path class="arrow" d="M 1250 520 L 1280 640"/>
+                    <path class="arrow" d="M 1350 520 L 1420 640"/>
 
-                    <rect class="node-box" id="node-clima" data-topic="clima" x="1100" y="550" width="200" height="70" rx="10" fill="#B3E5FC" stroke="#4FC3F7" stroke-width="2"/>
-                    <text class="node-text node-title" x="1200" y="580">🌡️ Mudanças</text>
-                    <text class="node-text" x="1200" y="605">Climáticas</text>
+                    <rect class="node-box" id="node-clima" data-topic="clima" x="1100" y="640" width="200" height="80" rx="12" fill="#B3E5FC" stroke="#4FC3F7" stroke-width="2"/>
+                    <text class="node-text" x="1200" y="670">🌡️ Mudanças</text>
+                    <text class="node-subtitle" x="1200" y="695">Climáticas</text>
 
-                    <rect class="node-box" id="node-alertas" data-topic="alertas" x="1250" y="550" width="200" height="70" rx="10" fill="#B3E5FC" stroke="#4FC3F7" stroke-width="2"/>
-                    <text class="node-text node-title" x="1350" y="580">⚠️ Alertas</text>
-                    <text class="node-text" x="1350" y="605">Desastres</text>
+                    <rect class="node-box" id="node-alertas" data-topic="alertas" x="1250" y="640" width="200" height="80" rx="12" fill="#B3E5FC" stroke="#4FC3F7" stroke-width="2"/>
+                    <text class="node-text" x="1350" y="670">⚠️ Alertas</text>
+                    <text class="node-subtitle" x="1350" y="695">Desastres</text>
 
-                    <rect class="node-box" id="node-especies" data-topic="especies" x="1400" y="550" width="200" height="70" rx="10" fill="#B3E5FC" stroke="#4FC3F7" stroke-width="2"/>
-                    <text class="node-text node-title" x="1500" y="580">🦁 Proteção</text>
-                    <text class="node-text" x="1500" y="605">Espécies</text>
+                    <rect class="node-box" id="node-especies" data-topic="especies" x="1400" y="640" width="200" height="80" rx="12" fill="#B3E5FC" stroke="#4FC3F7" stroke-width="2"/>
+                    <text class="node-text" x="1500" y="670">🦁 Proteção</text>
+                    <text class="node-subtitle" x="1500" y="695">Espécies</text>
 
                     <!-- Nível 5: Processamento -->
-                    <path class="arrow" d="M 150 620 L 500 730"/>
-                    <path class="arrow" d="M 300 620 L 600 730"/>
-                    <path class="arrow" d="M 450 620 L 700 730"/>
-                    <path class="arrow" d="M 600 620 L 800 730"/>
-                    <path class="arrow" d="M 800 620 L 800 730"/>
-                    <path class="arrow" d="M 900 620 L 800 730"/>
-                    <path class="arrow" d="M 1050 620 L 850 730"/>
-                    <path class="arrow" d="M 1150 620 L 950 730"/>
-                    <path class="arrow" d="M 1300 620 L 1050 730"/>
-                    <path class="arrow" d="M 1450 620 L 1100 730"/>
+                    <path class="arrow" d="M 120 720 L 450 850"/>
+                    <path class="arrow" d="M 270 720 L 550 850"/>
+                    <path class="arrow" d="M 420 720 L 650 850"/>
+                    <path class="arrow" d="M 570 720 L 700 850"/>
+                    <path class="arrow" d="M 800 720 L 800 850"/>
+                    <path class="arrow" d="M 950 720 L 850 850"/>
+                    <path class="arrow" d="M 1080 720 L 900 850"/>
+                    <path class="arrow" d="M 1200 720 L 950 850"/>
+                    <path class="arrow" d="M 1350 720 L 1000 850"/>
+                    <path class="arrow" d="M 1500 720 L 1100 850"/>
 
-                    <rect class="node-box" id="node-processamento" data-topic="processamento" x="500" y="730" width="400" height="100" rx="12" fill="#9c27b0" stroke="#7b1fa2" stroke-width="3"/>
-                    <text class="node-text node-title" x="700" y="765">📋 PROCESSAMENTO IA</text>
-                    <text class="node-text" x="700" y="790">Análise Integrada de Dados</text>
-                    <text class="node-text" x="700" y="815">Algoritmos de Machine Learning</text>
+                    <rect class="node-box" id="node-processamento" data-topic="processamento" x="450" y="850" width="500" height="120" rx="15" fill="#9c27b0" stroke="#7b1fa2" stroke-width="3"/>
+                    <text class="node-text" x="700" y="895">📋 PROCESSAMENTO IA</text>
+                    <text class="node-subtitle" x="700" y="925">Análise Integrada com Machine Learning</text>
+                    <text class="node-subtitle" x="700" y="950">Insights Acionáveis</text>
 
                     <!-- Nível 6: Decisão -->
-                    <path class="arrow" d="M 700 830 L 700 920"/>
-                    <rect class="node-box" id="node-decisao" data-topic="decisao" x="550" y="920" width="300" height="100" rx="12" fill="#667eea" stroke="#5568d3" stroke-width="3"/>
-                    <text class="node-text node-title" x="700" y="955">Tipo de Ação</text>
-                    <text class="node-text" x="700" y="980">(Governo, Empresa, Comunidade)</text>
-                    <text class="node-text" x="700" y="1005">Decisões Informadas</text>
+                    <path class="arrow" d="M 700 970 L 700 1090"/>
+                    <rect class="node-box" id="node-decisao" data-topic="decisao" x="520" y="1090" width="360" height="120" rx="15" fill="#667eea" stroke="#5568d3" stroke-width="3"/>
+                    <text class="node-text" x="700" y="1135">Tomada de Decisão</text>
+                    <text class="node-subtitle" x="700" y="1165">Baseada em Dados</text>
+                    <text class="node-subtitle" x="700" y="1190">Governo • Empresa • Comunidade</text>
 
                     <!-- Nível 7: Três caminhos de ação -->
-                    <path class="arrow" d="M 600 1020 L 400 1120"/>
-                    <path class="arrow" d="M 700 1020 L 700 1120"/>
-                    <path class="arrow" d="M 800 1020 L 1000 1120"/>
+                    <path class="arrow" d="M 620 1210 L 400 1320"/>
+                    <path class="arrow" d="M 700 1210 L 700 1320"/>
+                    <path class="arrow" d="M 780 1210 L 1000 1320"/>
 
-                    <rect class="node-box" id="node-politicas" data-topic="politicas" x="250" y="1120" width="300" height="100" rx="12" fill="#2196F3" stroke="#1976d2" stroke-width="3"/>
-                    <text class="node-text node-title" x="400" y="1155">🏛️ POLÍTICAS</text>
-                    <text class="node-text" x="400" y="1180">PÚBLICAS</text>
-                    <text class="node-text" x="400" y="1205">Leis e Programas</text>
+                    <rect class="node-box" id="node-politicas" data-topic="politicas" x="250" y="1320" width="300" height="110" rx="12" fill="#2196F3" stroke="#1976d2" stroke-width="3"/>
+                    <text class="node-text" x="400" y="1363">🏛️ POLÍTICAS</text>
+                    <text class="node-subtitle" x="400" y="1393">Públicas Ambientais</text>
+                    <text class="node-subtitle" x="400" y="1418">Leis e Programas</text>
 
-                    <rect class="node-box" id="node-empresas" data-topic="empresas" x="550" y="1120" width="300" height="100" rx="12" fill="#2196F3" stroke="#1976d2" stroke-width="3"/>
-                    <text class="node-text node-title" x="700" y="1155">🏢 ESTRATÉGIAS</text>
-                    <text class="node-text" x="700" y="1180">EMPRESARIAIS</text>
-                    <text class="node-text" x="700" y="1205">Sustentabilidade</text>
+                    <rect class="node-box" id="node-empresas" data-topic="empresas" x="580" y="1320" width="300" height="110" rx="12" fill="#2196F3" stroke="#1976d2" stroke-width="3"/>
+                    <text class="node-text" x="730" y="1363">🏢 ESTRATÉGIAS</text>
+                    <text class="node-subtitle" x="730" y="1393">Empresariais Verdes</text>
+                    <text class="node-subtitle" x="730" y="1418">Sustentabilidade</text>
 
-                    <rect class="node-box" id="node-comunidade" data-topic="comunidade" x="850" y="1120" width="300" height="100" rx="12" fill="#2196F3" stroke="#1976d2" stroke-width="3"/>
-                    <text class="node-text node-title" x="1000" y="1155">👥 AÇÕES</text>
-                    <text class="node-text" x="1000" y="1180">COMUNITÁRIAS</text>
-                    <text class="node-text" x="1000" y="1205">Engajamento Local</text>
+                    <rect class="node-box" id="node-comunidade" data-topic="comunidade" x="910" y="1320" width="300" height="110" rx="12" fill="#2196F3" stroke="#1976d2" stroke-width="3"/>
+                    <text class="node-text" x="1060" y="1363">👥 AÇÕES</text>
+                    <text class="node-subtitle" x="1060" y="1393">Comunitárias</text>
+                    <text class="node-subtitle" x="1060" y="1418">Engajamento Local</text>
 
                     <!-- Nível 8: Convergência -->
-                    <path class="arrow" d="M 400 1220 L 600 1320"/>
-                    <path class="arrow" d="M 700 1220 L 700 1320"/>
-                    <path class="arrow" d="M 1000 1220 L 800 1320"/>
+                    <path class="arrow" d="M 400 1430 L 600 1530"/>
+                    <path class="arrow" d="M 700 1430 L 700 1530"/>
+                    <path class="arrow" d="M 1000 1430 L 800 1530"/>
 
                     <!-- Nível 9: Preservação Ambiental -->
-                    <path class="arrow" d="M 700 1320 L 700 1420"/>
-                    <rect class="node-box" id="node-preservacao" data-topic="preservacao" x="500" y="1420" width="400" height="100" rx="12" fill="#00c853" stroke="#00b74d" stroke-width="4"/>
-                    <text class="node-text node-title" x="700" y="1455">🌱 PRESERVAÇÃO</text>
-                    <text class="node-text" x="700" y="1480">AMBIENTAL</text>
-                    <text class="node-text" x="700" y="1505">Meta Central Alcançada</text>
+                    <path class="arrow" d="M 700 1530 L 700 1640"/>
+                    <rect class="node-box" id="node-preservacao" data-topic="preservacao" x="450" y="1640" width="500" height="120" rx="15" fill="#00c853" stroke="#00a040" stroke-width="4"/>
+                    <text class="node-text" x="700" y="1685">🌱 PRESERVAÇÃO AMBIENTAL</text>
+                    <text class="node-subtitle" x="700" y="1715">Meta Central Alcançada</text>
+                    <text class="node-subtitle" x="700" y="1740">Todas as Ações Integradas</text>
 
                     <!-- Nível 10: Planeta Saudável -->
-                    <path class="arrow" d="M 700 1520 L 700 1620"/>
-                    <rect class="node-box" id="node-planeta" data-topic="planeta" x="500" y="1620" width="400" height="100" rx="12" fill="#f093fb" stroke="#f5576c" stroke-width="4"/>
-                    <text class="node-text node-title" x="700" y="1655">🌍 PLANETA MAIS</text>
-                    <text class="node-text" x="700" y="1680">SAUDÁVEL</text>
-                    <text class="node-text" x="700" y="1705">Resultado Tangível</text>
+                    <path class="arrow" d="M 700 1760 L 700 1870"/>
+                    <rect class="node-box" id="node-planeta" data-topic="planeta" x="450" y="1870" width="500" height="120" rx="15" fill="#f093fb" stroke="#f5576c" stroke-width="4"/>
+                    <text class="node-text" x="700" y="1915">🌍 PLANETA SAUDÁVEL</text>
+                    <text class="node-subtitle" x="700" y="1945">Resultado Tangível</text>
+                    <text class="node-subtitle" x="700" y="1970">Sustentável e Resiliente</text>
 
                     <!-- Nível 11: Resultados Finais -->
-                    <path class="arrow" d="M 600 1720 L 400 1820"/>
-                    <path class="arrow" d="M 700 1720 L 700 1820"/>
-                    <path class="arrow" d="M 800 1720 L 1000 1820"/>
+                    <path class="arrow" d="M 600 1990 L 400 2090"/>
+                    <path class="arrow" d="M 700 1990 L 700 2090"/>
+                    <path class="arrow" d="M 800 1990 L 1000 2090"/>
 
-                    <rect class="node-box" id="node-ecossistema" data-topic="ecossistema" x="280" y="1820" width="240" height="80" rx="10" fill="#A5D6A7" stroke="#66BB6A" stroke-width="2"/>
-                    <text class="node-text node-title" x="400" y="1850">♻️ Ecossistemas</text>
-                    <text class="node-text" x="400" y="1875">Protegidos</text>
+                    <rect class="node-box" id="node-ecossistema" data-topic="ecossistema" x="280" y="2090" width="240" height="90" rx="12" fill="#A5D6A7" stroke="#66BB6A" stroke-width="2"/>
+                    <text class="node-text" x="400" y="2128">♻️ Ecossistemas</text>
+                    <text class="node-subtitle" x="400" y="2153">Protegidos</text>
 
-                    <rect class="node-box" id="node-biodiversidade" data-topic="biodiversidade" x="580" y="1820" width="240" height="80" rx="10" fill="#A5D6A7" stroke="#66BB6A" stroke-width="2"/>
-                    <text class="node-text node-title" x="700" y="1850">🌳 Biodiversidade</text>
-                    <text class="node-text" x="700" y="1875">Preservada</text>
+                    <rect class="node-box" id="node-biodiversidade" data-topic="biodiversidade" x="590" y="2090" width="240" height="90" rx="12" fill="#A5D6A7" stroke="#66BB6A" stroke-width="2"/>
+                    <text class="node-text" x="710" y="2128">🌳 Biodiversidade</text>
+                    <text class="node-subtitle" x="710" y="2153">Preservada</text>
 
-                    <rect class="node-box" id="node-recursos" data-topic="recursos" x="880" y="1820" width="240" height="80" rx="10" fill="#A5D6A7" stroke="#66BB6A" stroke-width="2"/>
-                    <text class="node-text node-title" x="1000" y="1850">💧 Recursos</text>
-                    <text class="node-text" x="1000" y="1875">Conservados</text>
+                    <rect class="node-box" id="node-recursos" data-topic="recursos" x="900" y="2090" width="240" height="90" rx="12" fill="#A5D6A7" stroke="#66BB6A" stroke-width="2"/>
+                    <text class="node-text" x="1020" y="2128">💧 Recursos</text>
+                    <text class="node-subtitle" x="1020" y="2153">Conservados</text>
 
                     <!-- Nível 12: Clima -->
-                    <path class="arrow" d="M 300 1900 L 450 1980"/>
-                    <path class="arrow" d="M 700 1900 L 700 1980"/>
-                    <path class="arrow" d="M 1100 1900 L 950 1980"/>
+                    <path class="arrow" d="M 300 2180 L 450 2270"/>
+                    <path class="arrow" d="M 700 2180 L 700 2270"/>
+                    <path class="arrow" d="M 1100 2180 L 950 2270"/>
 
-                    <rect class="node-box" id="node-clima-final" data-topic="clima-final" x="550" y="1980" width="300" height="80" rx="10" fill="#A5D6A7" stroke="#66BB6A" stroke-width="2"/>
-                    <text class="node-text node-title" x="700" y="2010">🌤️ Clima</text>
-                    <text class="node-text" x="700" y="2035">Estabilizado</text>
+                    <rect class="node-box" id="node-clima-final" data-topic="clima-final" x="580" y="2270" width="280" height="90" rx="12" fill="#A5D6A7" stroke="#66BB6A" stroke-width="2"/>
+                    <text class="node-text" x="720" y="2308">🌤️ Clima</text>
+                    <text class="node-subtitle" x="720" y="2333">Estabilizado</text>
 
                     <!-- Nível 13: Futuro -->
-                    <path class="arrow" d="M 700 2060 L 700 2140"/>
-                    <rect class="node-box" id="node-futuro" data-topic="futuro" x="500" y="2140" width="400" height="120" rx="12" fill="#00b74d" stroke="#009688" stroke-width="4"/>
-                    <text class="node-text node-title" x="700" y="2175">✨ FUTURO SUSTENTÁVEL</text>
-                    <text class="node-text" x="700" y="2200">Para Gerações Futuras</text>
-                    <text class="node-text" x="700" y="2225">Harmonia Tecnologia e Natureza</text>
+                    <path class="arrow" d="M 700 2360 L 700 2450"/>
+                    <rect class="node-box" id="node-futuro" data-topic="futuro" x="450" y="2450" width="500" height="140" rx="15" fill="#00b74d" stroke="#009688" stroke-width="4"/>
+                    <text class="node-text" x="700" y="2500">✨ FUTURO SUSTENTÁVEL</text>
+                    <text class="node-subtitle" x="700" y="2530">Legado para Gerações Futuras</text>
+                    <text class="node-subtitle" x="700" y="2560">Tecnologia e Natureza em Harmonia</text>
                 </svg>
             </div>
 
             <div class="description-container">
                 <div id="description" class="default-info">
-                    <p>👆 Clique em qualquer tópico do fluxograma para ver uma descrição detalhada</p>
+                    <p>👆 Clique em qualquer tópico do fluxograma para explorar</p>
                 </div>
             </div>
         </div>
 
         <footer>
-            <p>🌿 Fluxograma Interativo - IA na Preservação Ambiental | Criado para um planeta melhor</p>
+            <p>🌿 Fluxograma Interativo - IA na Preservação Ambiental | Criado com 💚 para um planeta melhor</p>
         </footer>
     </div>
 
@@ -416,211 +466,355 @@
             ia: {
                 titulo: "🤖 Inteligência Artificial",
                 conteudo: `
-                    <p><strong>A IA como ferramenta para preservação ambiental</strong></p>
-                    <p>A Inteligência Artificial revoluciona a forma como monitoramos, analisamos e respondemos aos desafios ambientais. Através de algoritmos de aprendizado de máquina, visão computacional e processamento de dados em larga escala, a IA permite monitoramento contínuo em tempo real, previsões precisas de cenários futuros, otimização automática de recursos e detecção rápida de anomalias.</p>
+                    <p><strong>A IA como ferramenta transformadora para preservação ambiental</strong></p>
+                    <p>A Inteligência Artificial revoluciona a forma como monitoramos, analisamos e respondemos aos desafios ambientais do nosso tempo. Através de algoritmos avançados de aprendizado de máquina, visão computacional sofisticada e processamento de dados em larga escala, a IA permite:</p>
+                    <ul>
+                        <li>Monitoramento contínuo em tempo real de ecossistemas</li>
+                        <li>Previsões precisas de cenários ambientais futuros</li>
+                        <li>Otimização automática e inteligente de recursos naturais</li>
+                        <li>Detecção rápida e confiável de anomalias e ameaças ambientais</li>
+                    </ul>
                 `
             },
             aplicacoes: {
                 titulo: "🎯 Aplicações Principais",
                 conteudo: `
-                    <p><strong>Três pilares da IA para o meio ambiente</strong></p>
-                    <p>A IA atua em três frentes principais: <strong>Monitoramento</strong> para observar o estado ambiental, <strong>Otimização</strong> para usar recursos de forma eficiente, e <strong>Previsão</strong> para antecipar problemas. Cada uma dessas aplicações é crucial para a preservação ambiental.</p>
+                    <p><strong>Os três pilares da IA para o meio ambiente</strong></p>
+                    <p>A IA atua em três frentes principais complementares entre si:</p>
+                    <ul>
+                        <li><strong>Monitoramento:</strong> Observar e registrar o estado ambiental</li>
+                        <li><strong>Otimização:</strong> Usar recursos de forma eficiente e sustentável</li>
+                        <li><strong>Previsão:</strong> Antecipar e preparar-se para problemas futuros</li>
+                    </ul>
+                    <p>Cada uma dessas aplicações é absolutamente crucial para alcançar a preservação ambiental efetiva e duradoura.</p>
                 `
             },
             monitor: {
                 titulo: "📡 Monitoramento Ambiental",
                 conteudo: `
-                    <p><strong>Observação contínua do estado ambiental</strong></p>
-                    <p>O monitoramento com IA utiliza múltiplas tecnologias para coletar dados sobre o estado dos ecossistemas. Permite detecção precoce de mudanças ambientais, identificação de áreas em risco, rastreamento de espécies e habitats, e avaliação contínua de qualidade do ar e água.</p>
+                    <p><strong>Observação contínua do estado ambiental global</strong></p>
+                    <p>O monitoramento ambiental com IA utiliza múltiplas tecnologias avançadas para coletar dados detalhados sobre o estado dos ecossistemas em tempo real.</p>
+                    <p>Permite:</p>
+                    <ul>
+                        <li>Detecção precoce de mudanças ambientais significativas</li>
+                        <li>Identificação precisa de áreas em risco crítico</li>
+                        <li>Rastreamento contínuo de espécies e habitats naturais</li>
+                        <li>Avaliação contínua e detalhada de qualidade do ar e água</li>
+                    </ul>
                 `
             },
             otimiza: {
                 titulo: "⚡ Otimização de Recursos",
                 conteudo: `
-                    <p><strong>Uso eficiente de recursos naturais</strong></p>
-                    <p>A otimização com IA reduz o desperdício e maximiza a eficiência em processos produtivos. Inclui previsão de demanda de energia renovável, redução de uso de água na agricultura, minimização de emissões de carbono e gestão inteligente de recursos urbanos.</p>
+                    <p><strong>Uso eficiente e consciente de recursos naturais</strong></p>
+                    <p>A otimização com IA reduz dramaticamente o desperdício e maximiza a eficiência em todos os processos produtivos humanos.</p>
+                    <p>Aplicações práticas incluem:</p>
+                    <ul>
+                        <li>Previsão inteligente de demanda de energia renovável</li>
+                        <li>Redução significativa de consumo de água na agricultura</li>
+                        <li>Minimização estratégica de emissões de carbono</li>
+                        <li>Gestão inteligente e sustentável de recursos urbanos</li>
+                    </ul>
                 `
             },
             previsao: {
                 titulo: "📊 Previsão e Análise",
                 conteudo: `
-                    <p><strong>Antecipação de problemas ambientais</strong></p>
-                    <p>Modelos preditivos de IA ajudam a antecipar e preparar-se para desafios ambientais futuros. Incluem previsão de mudanças climáticas, alerta antecipado de desastres naturais, proteção de espécies ameaçadas e análise de tendências de biodiversidade.</p>
+                    <p><strong>Antecipação inteligente de problemas ambientais</strong></p>
+                    <p>Modelos preditivos avançados de IA ajudam a antecipar e preparar-se para desafios ambientais futuros com precisão notável.</p>
+                    <p>Benefícios incluem:</p>
+                    <ul>
+                        <li>Previsão de mudanças climáticas em longo prazo</li>
+                        <li>Alerta antecipado de desastres naturais iminentes</li>
+                        <li>Proteção estratégica de espécies ameaçadas de extinção</li>
+                        <li>Análise detalhada de tendências de biodiversidade</li>
+                    </ul>
                 `
             },
             satelite: {
                 titulo: "🛰️ Satélites e Imagens",
                 conteudo: `
-                    <p><strong>Observação do planeta do espaço</strong></p>
-                    <p>Satélites equipados com sensores avançados capturam imagens da Terra. A IA analisa estas imagens para mapear cobertura florestal, detectar desmatamento ilegal, monitorar expansão urbana e avaliar saúde de culturas agrícolas.</p>
-                    <div class="topic-box">💡 <strong>Precisão:</strong> até 1 metro por pixel</div>
+                    <p><strong>Observação do planeta a partir do espaço</strong></p>
+                    <p>Satélites equipados com sensores avançados capturam imagens de alta resolução da Terra continuamente. A IA analisa estas imagens para:</p>
+                    <ul>
+                        <li>Mapear cobertura florestal em tempo real com precisão</li>
+                        <li>Detectar desmatamento ilegal em áreas remotas</li>
+                        <li>Monitorar expansão urbana descontrolada</li>
+                        <li>Avaliar saúde e produtividade de culturas agrícolas</li>
+                    </ul>
+                    <div class="topic-box">💡 <strong>Precisão tecnológica:</strong> até 1 metro por pixel em resolução</div>
                 `
             },
             iot: {
                 titulo: "📍 Sensores IoT",
                 conteudo: `
-                    <p><strong>Rede de sensores inteligentes</strong></p>
-                    <p>Sensores distribuídos pela natureza coletam dados contínuos sobre qualidade do ar, qualidade e nível da água, temperatura e umidade do solo, e movimento de animais e migrações.</p>
-                    <div class="topic-box">📡 <strong>Conectividade:</strong> em tempo real via 5G/LoRaWAN</div>
+                    <p><strong>Rede global de sensores inteligentes conectados</strong></p>
+                    <p>Sensores distribuídos estrategicamente pela natureza e cidades coletam dados contínuos sobre:</p>
+                    <ul>
+                        <li>Qualidade do ar e níveis de poluição urbana</li>
+                        <li>Qualidade e nível da água em rios e aquíferos</li>
+                        <li>Temperatura, umidade e composição do solo</li>
+                        <li>Movimento de animais e padrões de migrações naturais</li>
+                    </ul>
+                    <div class="topic-box">📡 <strong>Conectividade:</strong> em tempo real via 5G e LoRaWAN</div>
                 `
             },
             cameras: {
                 titulo: "🎥 Câmeras Inteligentes",
                 conteudo: `
-                    <p><strong>Visão computacional para proteção ambiental</strong></p>
-                    <p>Câmeras com IA reconhecem padrões visuais para detectar queimadas em desenvolvimento, atividades de caça e pesca ilegais, acesso não autorizado em áreas protegidas e espécies específicas em habitats naturais.</p>
-                    <div class="topic-box">🎯 <strong>Taxa de acerto:</strong> >95% em detecções</div>
+                    <p><strong>Visão computacional avançada para proteção ambiental</strong></p>
+                    <p>Câmeras equipadas com IA reconhecem padrões visuais complexos para detectar:</p>
+                    <ul>
+                        <li>Queimadas em estágio inicial de desenvolvimento</li>
+                        <li>Atividades de caça e pesca ilegais</li>
+                        <li>Acesso não autorizado em áreas protegidas</li>
+                        <li>Espécies específicas em seus habitats naturais</li>
+                    </ul>
+                    <div class="topic-box">🎯 <strong>Taxa de acerto:</strong> superior a 95% em detecções confiáveis</div>
                 `
             },
             bioacustica: {
                 titulo: "🔊 Bioacústica",
                 conteudo: `
-                    <p><strong>Análise de sons da natureza</strong></p>
-                    <p>IA analisa sons para entender e monitorar ecossistemas através de identificação automática de espécies animais, detecção de mudanças nos padrões de canto, monitoramento de saúde ecológica via biodiversidade acústica e alertas de atividades criminosas.</p>
-                    <div class="topic-box">🎵 <strong>Capacidade:</strong> Distinguir >1000 espécies</div>
+                    <p><strong>Análise sofisticada dos sons da natureza</strong></p>
+                    <p>IA analisa sons ambientais para entender e monitorar ecossistemas complexos através de:</p>
+                    <ul>
+                        <li>Identificação automática de espécies animais pelos sons</li>
+                        <li>Detecção de mudanças nos padrões naturais de canto</li>
+                        <li>Monitoramento de saúde ecológica via biodiversidade acústica</li>
+                        <li>Alertas de atividades criminosas e contrabando na floresta</li>
+                    </ul>
+                    <div class="topic-box">🎵 <strong>Capacidade:</strong> Distinguir corretamente mais de 1000 espécies diferentes</div>
                 `
             },
             energia: {
                 titulo: "☀️ Energia Renovável",
                 conteudo: `
-                    <p><strong>Otimização de fontes limpas de energia</strong></p>
-                    <p>IA melhora a eficiência de energia solar e eólica através de previsão de produção, otimização de ângulo de painéis, previsão de velocidade do vento e gerenciamento inteligente da grid de distribuição.</p>
-                    <div class="topic-box">⚡ <strong>Aumento de eficiência:</strong> até 25%</div>
+                    <p><strong>Otimização inteligente de fontes limpas de energia</strong></p>
+                    <p>IA melhora significativamente a eficiência de energia solar e eólica através de:</p>
+                    <ul>
+                        <li>Previsão precisa de produção baseada em padrões climáticos</li>
+                        <li>Otimização dinâmica de ângulo e orientação de painéis solares</li>
+                        <li>Previsão confiável de velocidade do vento para turbinas</li>
+                        <li>Gerenciamento inteligente e equilibrado da grid de distribuição</li>
+                    </ul>
+                    <div class="topic-box">⚡ <strong>Ganho de eficiência:</strong> até 25% de melhora comprovada</div>
                 `
             },
             agricultura: {
                 titulo: "🌾 Agricultura de Precisão",
                 conteudo: `
-                    <p><strong>Agricultura sustentável e produtiva</strong></p>
-                    <p>IA otimiza práticas agrícolas para reduzir impacto ambiental através de uso preciso de água, aplicação dirigida de fertilizantes, previsão de pragas e otimização de rotação de culturas.</p>
-                    <div class="topic-box">💧 <strong>Redução de água:</strong> até 30%</div>
+                    <p><strong>Agricultura moderna, sustentável e altamente produtiva</strong></p>
+                    <p>IA otimiza práticas agrícolas para reduzir drasticamente o impacto ambiental:</p>
+                    <ul>
+                        <li>Uso preciso de água - irrigação apenas onde necessário</li>
+                        <li>Aplicação dirigida de fertilizantes apenas em áreas específicas</li>
+                        <li>Previsão antecipada de pragas e doenças das plantações</li>
+                        <li>Otimização estratégica de rotação de culturas</li>
+                    </ul>
+                    <div class="topic-box">💧 <strong>Economia de água:</strong> redução de até 30% no consumo</div>
                 `
             },
             emissoes: {
                 titulo: "💨 Redução de Emissões",
                 conteudo: `
-                    <p><strong>Combate às mudanças climáticas</strong></p>
-                    <p>IA identifica e reduz fontes de emissão de carbono através de otimização de rotas de transporte, gerenciamento eficiente de fábricas, detecção de vazamentos de gases e previsão de emissões futuras.</p>
-                    <div class="topic-box">🌍 <strong>Potencial de redução:</strong> até 40%</div>
+                    <p><strong>Combate efetivo e estratégico às mudanças climáticas</strong></p>
+                    <p>IA identifica e reduz fontes de emissão de carbono de forma sistemática:</p>
+                    <ul>
+                        <li>Otimização inteligente de rotas de transporte logístico</li>
+                        <li>Gerenciamento eficiente e controlado de operações fabris</li>
+                        <li>Detecção automática de vazamentos de gases perigosos</li>
+                        <li>Previsão de futuras emissões para planejamento estratégico</li>
+                    </ul>
+                    <div class="topic-box">🌍 <strong>Potencial de redução:</strong> até 40% em emissões totais</div>
                 `
             },
             urbana: {
-                titulo: "💡 Eficiência Urbana",
+                titulo: "💡 Cidades Inteligentes",
                 conteudo: `
-                    <p><strong>Cidades inteligentes e sustentáveis</strong></p>
-                    <p>IA torna cidades mais eficientes ambientalmente através de otimização de iluminação pública, gerenciamento inteligente de tráfego, monitoramento de qualidade do ar urbano e gestão eficiente de resíduos.</p>
-                    <div class="topic-box">📊 <strong>Redução de energia:</strong> até 35%</div>
+                    <p><strong>Urbanização inteligente e ambientalmente sustentável</strong></p>
+                    <p>IA torna cidades mais eficientes e verdes através de:</p>
+                    <ul>
+                        <li>Otimização adaptativa de iluminação pública nas ruas</li>
+                        <li>Gerenciamento inteligente do tráfego urbano e congestionamentos</li>
+                        <li>Monitoramento contínuo de qualidade do ar na cidade</li>
+                        <li>Gestão eficiente e planejada de resíduos urbanos</li>
+                    </ul>
+                    <div class="topic-box">📊 <strong>Redução de energia:</strong> até 35% em consumo geral</div>
                 `
             },
             clima: {
                 titulo: "🌡️ Mudanças Climáticas",
                 conteudo: `
-                    <p><strong>Previsão de cenários climáticos</strong></p>
-                    <p>Modelos de IA simulam mudanças climáticas futuras através de previsão de aumento de temperatura, mudanças em padrões de chuva, cenários de elevação do nível do mar e impactos regionais específicos.</p>
-                    <div class="topic-box">🔮 <strong>Precisão:</strong> até 50 anos de antecedência</div>
+                    <p><strong>Previsão sofisticada de cenários climáticos futuros</strong></p>
+                    <p>Modelos avançados de IA simulam mudanças climáticas futuras com precisão impressionante:</p>
+                    <ul>
+                        <li>Previsão de aumento de temperatura global</li>
+                        <li>Mudanças em padrões de chuva e precipitação</li>
+                        <li>Cenários de elevação do nível do mar costeiro</li>
+                        <li>Impactos regionais específicos e localizados</li>
+                    </ul>
+                    <div class="topic-box">🔮 <strong>Alcance temporal:</strong> previsões com até 50 anos de antecedência</div>
                 `
             },
             alertas: {
                 titulo: "⚠️ Alertas de Desastres",
                 conteudo: `
-                    <p><strong>Prevenção de catástrofes naturais</strong></p>
-                    <p>Sistemas de IA fornecem avisos antecipados de furacões e tempestades, inundações, terremotos iminentes e deslizamentos de terra, salvando vidas e reduzindo danos.</p>
-                    <div class="topic-box">⏰ <strong>Tempo de antecedência:</strong> até 72 horas</div>
+                    <p><strong>Sistema de prevenção de catástrofes naturais</strong></p>
+                    <p>Sistemas avançados de IA fornecem avisos antecipados confiáveis:</p>
+                    <ul>
+                        <li>Previsão de furacões e tempestades severas</li>
+                        <li>Alerta de inundações com antecedência</li>
+                        <li>Detecção de terremotos iminentes ou aftershocks</li>
+                        <li>Avisos de deslizamentos de terra perigosos</li>
+                    </ul>
+                    <div class="topic-box">⏰ <strong>Tempo de alerta:</strong> até 72 horas de antecedência</div>
                 `
             },
             especies: {
                 titulo: "🦁 Proteção de Espécies",
                 conteudo: `
-                    <p><strong>Salvação de espécies ameaçadas</strong></p>
-                    <p>IA ajuda a proteger animais em perigo de extinção através de monitoramento de populações, detecção de caça ilegal, análise de viabilidade genética e otimização de habitats protegidos.</p>
-                    <div class="topic-box">🦁 <strong>Sucesso em recuperação:</strong> até 70%</div>
+                    <p><strong>Salvação de animais em perigo de extinção</strong></p>
+                    <p>IA ajuda a proteger efetivamente espécies ameaçadas:</p>
+                    <ul>
+                        <li>Monitoramento preciso de populações em tempo real</li>
+                        <li>Detecção automática de caça e tráfico ilegal</li>
+                        <li>Análise genética de viabilidade das populações</li>
+                        <li>Otimização estratégica de habitats protegidos</li>
+                    </ul>
+                    <div class="topic-box">🦁 <strong>Sucesso comprovado:</strong> até 70% de sucesso em recuperação</div>
                 `
             },
             processamento: {
                 titulo: "📋 Processamento com IA",
                 conteudo: `
-                    <p><strong>Análise integrada de dados</strong></p>
-                    <p>Todos os dados coletados pelos sensores, câmeras e satélites são processados por algoritmos de IA que identificam padrões, detectam anomalias e geram insights acionáveis para a preservação ambiental.</p>
+                    <p><strong>Análise integrada e centralizada de todos os dados</strong></p>
+                    <p>Todos os dados coletados pelos sensores, câmeras e satélites convergem para centros de processamento onde algoritmos sofisticados de IA:</p>
+                    <ul>
+                        <li>Identificam padrões complexos nos dados ambientais</li>
+                        <li>Detectam anomalias com alta precisão</li>
+                        <li>Correlacionam eventos de múltiplas fontes</li>
+                        <li>Geram insights acionáveis para a preservação ambiental</li>
+                    </ul>
                 `
             },
             decisao: {
                 titulo: "🎯 Tomada de Decisão",
                 conteudo: `
-                    <p><strong>Ações informadas por dados</strong></p>
-                    <p>As análises de IA orientam três tipos de ações: Políticas Públicas para legislação ambiental, Estratégias Empresariais para sustentabilidade corporativa e Ações Comunitárias para engajamento local.</p>
+                    <p><strong>Decisões fundamentadas em dados científicos confiáveis</strong></p>
+                    <p>As análises de IA orientam três tipos complementares de ações:</p>
+                    <ul>
+                        <li>Políticas Públicas para legislação ambiental robusta</li>
+                        <li>Estratégias Empresariais para sustentabilidade corporativa</li>
+                        <li>Ações Comunitárias para engajamento local efetivo</li>
+                    </ul>
+                    <p>Essa abordagem multi-nível garante impacto máximo e duradouro.</p>
                 `
             },
             politicas: {
                 titulo: "🏛️ Políticas Públicas",
                 conteudo: `
-                    <p><strong>Legislação ambiental baseada em dados</strong></p>
-                    <p>Governos usam análises de IA para criar leis ambientais cientificamente fundamentadas, programas de proteção direcionados, investimentos em áreas prioritárias e monitorar compliance regulatório.</p>
-                    <div class="topic-box">📋 <strong>Impacto:</strong> Alcance de milhões de pessoas</div>
+                    <p><strong>Legislação ambiental fundamentada em dados científicos</strong></p>
+                    <p>Governos usam análises de IA para criar políticas ambientais efetivas:</p>
+                    <ul>
+                        <li>Leis ambientais cientificamente fundamentadas e baseadas em evidências</li>
+                        <li>Programas de proteção direcionados para áreas prioritárias</li>
+                        <li>Investimentos estratégicos em tecnologias verdes</li>
+                        <li>Monitoramento automático de compliance regulatório</li>
+                    </ul>
+                    <div class="topic-box">📋 <strong>Alcance do impacto:</strong> Milhões de pessoas beneficiadas</div>
                 `
             },
             empresas: {
                 titulo: "🏢 Estratégias Empresariais",
                 conteudo: `
-                    <p><strong>Sustentabilidade corporativa</strong></p>
-                    <p>Empresas implementam práticas verdes com IA reduzindo sua huella de carbono, inovando em produtos sustentáveis, otimizando cadeias de suprimentos e conformando-se com normas ambientais.</p>
-                    <div class="topic-box">💼 <strong>Benefício:</strong> Redução de custos + reputação</div>
+                    <p><strong>Sustentabilidade corporativa impulsionada pela IA</strong></p>
+                    <p>Empresas implementam práticas verdes com suporte de IA:</p>
+                    <ul>
+                        <li>Redução significativa de pegada de carbono corporativa</li>
+                        <li>Inovação em produtos e serviços sustentáveis</li>
+                        <li>Otimização de cadeia de suprimentos para menos resíduos</li>
+                        <li>Conformidade proativa com normas ambientais</li>
+                    </ul>
+                    <div class="topic-box">💼 <strong>Retorno sobre investimento:</strong> Redução de custos + melhoria de reputação</div>
                 `
             },
             comunidade: {
                 titulo: "👥 Ações Comunitárias",
                 conteudo: `
-                    <p><strong>Engajamento local para mudança</strong></p>
-                    <p>Comunidades implementam iniciativas práticas como educação ambiental, projetos de conservação local, monitoramento cidadão de áreas verdes e limpeza e restauração de ambientes.</p>
-                    <div class="topic-box">👫 <strong>Poder:</strong> Transformação por comunidades unidas</div>
+                    <p><strong>Engajamento local para mudança ambiental duradoura</strong></p>
+                    <p>Comunidades implementam iniciativas práticas e efetivas:</p>
+                    <ul>
+                        <li>Educação ambiental com dados e visualizações de IA</li>
+                        <li>Projetos de conservação local especializados</li>
+                        <li>Monitoramento cidadão de áreas verdes e naturais</li>
+                        <li>Limpeza e restauração organizada de ambientes</li>
+                    </ul>
+                    <div class="topic-box">👫 <strong>Poder transformador:</strong> Comunidades unidas criam mudanças reais</div>
                 `
             },
             preservacao: {
                 titulo: "🌱 Preservação Ambiental",
                 conteudo: `
-                    <p><strong>Meta central de todo o fluxograma</strong></p>
-                    <p>A preservação ambiental é o resultado final de todas as ações integradas: monitoramento eficaz, otimização de recursos, previsões acertadas, decisões informadas e ações coordenadas em múltiplos níveis.</p>
+                    <p><strong>Meta central e crítica de todo o fluxograma</strong></p>
+                    <p>A preservação ambiental é o resultado tangível de todas as ações integradas funcionando juntas:</p>
+                    <ul>
+                        <li>Monitoramento ambiental eficaz e contínuo</li>
+                        <li>Otimização inteligente de recursos naturais</li>
+                        <li>Previsões acertadas que evitam problemas</li>
+                        <li>Decisões informadas em múltiplos níveis</li>
+                        <li>Ações coordenadas em governo, empresa e comunidade</li>
+                    </ul>
                 `
             },
             planeta: {
-                titulo: "🌍 Planeta Mais Saudável",
+                titulo: "🌍 Planeta Saudável",
                 conteudo: `
-                    <p><strong>Resultado tangível da IA para o meio ambiente</strong></p>
-                    <p>Um planeta mais saudável significa ecossistemas protegidos, biodiversidade preservada, recursos naturais conservados e clima mais estável. Isso torna nosso mundo mais resiliente e sustentável.</p>
+                    <p><strong>Resultado tangível da IA em ação pelo meio ambiente</strong></p>
+                    <p>Um planeta mais saudável significa:</p>
+                    <ul>
+                        <li>Ecossistemas naturais protegidos e recuperados</li>
+                        <li>Biodiversidade preservada em abundância</li>
+                        <li>Recursos naturais conservados para futuras gerações</li>
+                        <li>Clima mais estável e previsível</li>
+                    </ul>
+                    <p>Isso torna nosso mundo infinitamente mais resiliente, sustentável e seguro para todos.</p>
                 `
             },
             ecossistema: {
                 titulo: "♻️ Ecossistemas Protegidos",
                 conteudo: `
-                    <p><strong>Habitats naturais conservados</strong></p>
-                    <p>Florestas, oceanos, rios e outros ecossistemas são protegidos através do monitoramento com IA, permitindo que a natureza se recupere e prospere.</p>
+                    <p><strong>Habitats naturais preservados e recuperados</strong></p>
+                    <p>Florestas, oceanos, rios e outros ecossistemas críticos são protegidos através do monitoramento inteligente com IA, permitindo que a natureza se recupere naturalmente e prospere de forma sustentável.</p>
                 `
             },
             biodiversidade: {
                 titulo: "🌳 Biodiversidade Preservada",
                 conteudo: `
-                    <p><strong>Variedade de vida protegida</strong></p>
-                    <p>Milhões de espécies são protegidas através da IA, garantindo que futuras gerações possam apreciar a riqueza da vida no planeta.</p>
+                    <p><strong>Variedade extraordinária de vida protegida</strong></p>
+                    <p>Milhões de espécies diferentes são protegidas efetivamente através da IA, garantindo que futuras gerações possam apreciar e beneficiar-se da riqueza incomparável da vida no planeta.</p>
                 `
             },
             recursos: {
                 titulo: "💧 Recursos Conservados",
                 conteudo: `
-                    <p><strong>Água, energia e alimentos seguros</strong></p>
-                    <p>Através da otimização com IA, recursos naturais como água e energia são usados de forma eficiente, garantindo disponibilidade para futuras gerações.</p>
+                    <p><strong>Água, energia e alimentos seguros e disponíveis</strong></p>
+                    <p>Através da otimização inteligente com IA, recursos naturais cruciais como água doce, energia limpa e alimentos nutritivos são usados de forma eficiente, garantindo disponibilidade duradoura para futuras gerações.</p>
                 `
             },
             "clima-final": {
                 titulo: "🌤️ Clima Estabilizado",
                 conteudo: `
-                    <p><strong>Mudanças climáticas controladas</strong></p>
-                    <p>Através de redução de emissões e adaptação inteligente, o clima do planeta é estabilizado, criando um ambiente mais previsível e seguro para todos.</p>
+                    <p><strong>Mudanças climáticas controladas e mitigadas</strong></p>
+                    <p>Através de redução sistemática de emissões e adaptação inteligente, o clima do planeta é estabilizado, criando um ambiente mais previsível, seguro e favorável para toda a vida.</p>
                 `
             },
             futuro: {
                 titulo: "✨ Futuro Sustentável",
                 conteudo: `
-                    <p><strong>Legado para gerações futuras</strong></p>
-                    <p>O objetivo final é criar um futuro onde a tecnologia e a natureza trabalham juntas em harmonia, permitindo que a humanidade prospere sem destruir o planeta que nos sustenta.</p>
+                    <p><strong>Legado duradouro para gerações futuras</strong></p>
+                    <p>O objetivo final é criar um futuro brilhante onde a tecnologia e a natureza trabalham juntas em harmonia perfeita, permitindo que a humanidade prospere abundantemente sem destruir ou degradar o planeta que nos sustenta e alimenta.</p>
+                    <p>Esse é o verdadeiro sucesso: desenvolvimento para todos, natureza protegida para sempre.</p>
                 `
             }
         };
@@ -632,6 +826,7 @@
                     <div class="description-title">${desc.titulo}</div>
                     <div class="description-content">${desc.conteudo}</div>
                 `;
+                document.getElementById('description').scrollTop = 0;
             }
         }
 
